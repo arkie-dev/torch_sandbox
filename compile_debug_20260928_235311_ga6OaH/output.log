@@ -1,0 +1,18 @@
+/home/arki/miniconda3/envs/aiperf/lib/python3.10/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W0928 23:53:14.629000 364096 site-packages/torch/_inductor/debug.py:587] [0/0] model__0_inference_0 debug trace: /home/arki/workspace/pytorch/agent_space/compile_debug_20260928_235311_ga6OaH/torch_compile_debug/run_2026_09_28_23_53_13_033773-pid_364096/torchinductor/model__0_inference_0.0
+input pointer % 16: 4
+out pointer % 16: 0 -> 4
+Traceback (most recent call last):
+  File "/home/arki/workspace/pytorch/agent_space/extern_kernel_out_unaligned.py", line 47, in <module>
+    torch.cuda.synchronize()
+  File "/home/arki/miniconda3/envs/aiperf/lib/python3.10/site-packages/torch/cuda/__init__.py", line 1342, in synchronize
+    return torch._C._cuda_synchronize()
+torch.AcceleratorError: CUDA error: misaligned address
+Search for `cudaErrorMisalignedAddress' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+The CUDA driver logged these messages, which may provide useful details:
+Returning 716 (CUDA_ERROR_MISALIGNED_ADDRESS) from cuCtxSynchronize_v2
+
+

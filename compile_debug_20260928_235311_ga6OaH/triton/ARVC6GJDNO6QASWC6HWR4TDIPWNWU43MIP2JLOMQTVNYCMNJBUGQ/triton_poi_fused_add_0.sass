@@ -1,0 +1,35 @@
+Function:triton_poi_fused_add_0
+--:-:-:-:1	LDC R1, c[0x0][0x37c];
+--:-:0:-:1	S2R R0, SR_TID.X;
+--:-:1:-:1	LDCU.64 UR6, c[0x0][0x380];
+--:-:2:-:1	S2R R3, SR_CTAID.X;
+--:-:3:-:1	LDCU.64 UR4, c[0x0][0x358];
+01:-:-:Y:4	SHF.L.U32 R0, R0, 0x1, RZ;
+--:-:-:Y:4	LOP3.LUT R0, R0, 0xfe, RZ, 0xc0, !PT;
+04:-:-:Y:4	LEA R0, R3, R0, 0x8;
+--:-:-:-:1	SHF.L.U32 R2, R0.reuse, 0x2, RZ;
+--:-:-:Y:5	IMAD.HI R3, R0, 0x4, RZ;
+02:-:-:Y:6	IADD.64 R2, R2, UR6;
+08:-:2:-:2	LDG.E.64 R4, desc[UR4][R2.64];
+04:-:-:-:1	FADD R4, R4, 1;
+--:-:-:Y:5	FADD R5, R5, 1;
+--:-:-:-:1	STG.E.64 desc[UR4][R2.64], R4;
+--:-:-:-:5	EXIT;
+LBB0:
+--:-:-:Y:0	BRA LBB0;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+--:-:-:Y:0	NOP;
+

@@ -1,0 +1,1 @@
+{"preToPost": {"x": ["slice_1"], "y": ["copy"], "add": ["add"]}, "postToPre": {"slice_1": ["x"], "copy": ["y"], "add": ["add"]}, "cppCodeToPost": {"torch.ops.alignment_demo.copy.out:1": ["copy"], "triton_poi_fused_add_0:2": ["add"]}, "postToCppCode": {"copy": ["torch.ops.alignment_demo.copy.out:1"], "add": ["triton_poi_fused_add_0:2"]}}

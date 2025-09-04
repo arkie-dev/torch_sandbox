@@ -1,0 +1,6 @@
+/home/arki/miniconda3/envs/aiperf/lib/python3.10/site-packages/torch/_dynamo/pgo.py:605: UserWarning: dynamo_pgo force disabled by torch.compiler.config.force_disable_caches
+  warn_once(
+W0928 23:52:58.902000 363526 site-packages/torch/_inductor/debug.py:587] [0/0] model__0_inference_0 debug trace: /home/arki/workspace/pytorch/agent_space/compile_debug_20260928_235256_BVGGqz/torch_compile_debug/run_2026_09_28_23_52_57_335873-pid_363526/torchinductor/model__0_inference_0.0
+input pointer % 16: 4
+out pointer % 16: 0 -> 4
+Output matches; no alignment failure observed on this run.
